@@ -12,21 +12,3 @@ def bubble_sort1(arr):
                 arr[i+1] = temp
     return arr
 
-# better implementation to stop the process if the arr is already sorted
-
-def bubble_sort2(arr):
-    exchanges = True
-    pass_num = len(arr) - 1
-    while pass_num > 0 and exchanges:
-        exchanges = False
-        for i in range(pass_num):
-            if arr[i] > arr[i + 1]:
-                exchanges = True
-                temp = arr[i]
-                arr[i] = arr[i + 1]
-                arr[i + 1] = temp
-                pass_num = pass_num - 1
-    return arr
-
-arr2 = [54, 26, 93, 17, 77, 31, 44, 55, 20]
-print(bubble_sort2(arr2))
